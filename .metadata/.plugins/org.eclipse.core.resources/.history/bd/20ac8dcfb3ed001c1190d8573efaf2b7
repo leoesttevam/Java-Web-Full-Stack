@@ -1,0 +1,17 @@
+package OrientacaoObj;
+
+import java.util.Date;
+
+public class Aluno {
+
+	String nome;
+	int idade;
+	Date dataNascimento;
+	String registroGeral;
+	String numeroCpf;
+	String nomeMae;
+	String nomePai;
+	Date dataMatricula;
+	String nomeEscola;
+	String serie;
+}

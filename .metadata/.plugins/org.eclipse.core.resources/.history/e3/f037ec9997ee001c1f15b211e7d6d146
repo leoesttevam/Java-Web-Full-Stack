@@ -1,0 +1,14 @@
+package OrientacaoObj;
+
+public class Disciplina {
+
+	private String disciplina1;
+	private String disciplina2;
+	private String disciplina3;
+	private String disciplina4;
+	
+	private double nota1;
+	private double nota2;
+	private double nota3;
+	private double nota4;
+}

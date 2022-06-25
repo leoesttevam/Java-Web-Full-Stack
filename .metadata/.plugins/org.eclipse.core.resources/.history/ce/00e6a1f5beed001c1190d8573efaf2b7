@@ -1,0 +1,31 @@
+package OrientacaoObj;
+
+import java.util.Date;
+
+public class Aluno {
+	
+	//Esses são os atributos do Aluno
+	private String nome;
+	private int idade;
+	private Date dataNascimento;
+	private String registroGeral;
+	private String numeroCpf;
+	private String nomeMae;
+	private String nomePai;
+	private Date dataMatricula;
+	private String nomeEscola;
+	private String serie;
+	
+	public Aluno() { //cria os dados namemoria, sendo o padrão do java
+		
+	}
+	
+	public Aluno(String nomeP) {
+		nome = nomeP;
+	}
+	
+	public Aluno (String nomeP, int idadeP) {
+		nome = nomeP;
+		idade = idadeP;
+	}
+}

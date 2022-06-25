@@ -1,0 +1,62 @@
+package executavel;
+
+import javax.swing.JOptionPane;
+
+import OrientacaoObj.Aluno;
+
+public class ExecutavelAluno {
+	
+	//Main é um metodo auto executavel em Java.
+	public static void main(String[] args) {
+		
+		//Objeto ainda não existe na memoria.
+		//Aluno aluno;
+		
+		
+		//aluno1 é uma referencia para o objeto Aluno
+		//new Aluno() é uma instancia (Criação de Objeto)
+		//Agora temos um objeto real na memoria pois ele está iniciado pelo new.
+		//Aluno aluno1 = new Aluno();//Aqui será o João
+		
+		String nome = JOptionPane.showInputDialog("Informe o nome do aluno?");
+		String idade = JOptionPane.showInputDialog("Informe o idade do aluno?");
+		String nascimento = JOptionPane.showInputDialog("Informe a data de nascimento do aluno?");
+		String registro = JOptionPane.showInputDialog("Informe o registro geral do aluno?");
+		String cpf = JOptionPane.showInputDialog("Informe o cpf do aluno?");
+		String mae = JOptionPane.showInputDialog("Informe o nome da mãe do aluno?");
+		String pai = JOptionPane.showInputDialog("Informe o nome do pai do aluno?");
+		String matri = JOptionPane.showInputDialog("Informe o número da matricula do aluno?");
+		String escola = JOptionPane.showInputDialog("Informe o nome da escola do aluno?");
+		String serie = JOptionPane.showInputDialog("Informe a serie do aluno?");
+		
+		Aluno aluno1 = new Aluno();//Aqui será o João
+		aluno1.setNome(nome);
+		aluno1.setIdade(idade);
+		aluno1.setDataNascimento("17/09/2003");
+		aluno1.setRegistroGeral("4598378-SP");
+		aluno1.setNumeroCpf("44444-65673-98567-3");
+		aluno1.setNomeMae("Maria");
+		aluno1.setNomePai("José");
+		aluno1.setDataMatricula("16/01/2017");
+		aluno1.setNomeEscola("E.M. Emilio Matarrazo");
+		aluno1.setSerie("3 ANO");
+		aluno1.setNota1(6.5);
+		aluno1.setNota2(5.3);
+		aluno1.setNota3(7.0);
+		aluno1.setNota4(7.6);
+		System.out.println("Nome do aluno: " + aluno1.getNome());
+		System.out.println("Idade do aluno: " + aluno1.getIdade());
+		System.out.println("Data nascimento: " + aluno1.getDataNascimento());
+		System.out.println("Registro geral: " + aluno1.getRegistroGeral());
+		System.out.println("CPF: " + aluno1.getNumeroCpf());
+		System.out.println("Nome da mãe: " + aluno1.getNomeMae());
+		System.out.println("Nome do pai: " + aluno1.getNomePai());
+		System.out.println("Data da matricula: " + aluno1.getDataMatricula());
+		System.out.println("Escola: " + aluno1.getNomeEscola());
+		System.out.println("Serie: " + aluno1.getSerie());
+		System.out.println();
+		System.out.println("Media do aluno: " + aluno1.getNome() + " é: " + aluno1.getMediaNota());
+		System.out.println("Status: " + aluno1.getStatus());
+		
+	}
+}

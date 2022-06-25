@@ -1,0 +1,80 @@
+package executavel;
+
+import javax.swing.JOptionPane;
+
+import OrientacaoObj.Aluno;
+import OrientacaoObj.Disciplina;
+
+public class ExecutavelAluno {
+	
+	//Main é um metodo auto executavel em Java.
+	public static void main(String[] args) {
+		
+		//Objeto ainda não existe na memoria.
+		//Aluno aluno;
+		
+		
+		//aluno1 é uma referencia para o objeto Aluno
+		//new Aluno() é uma instancia (Criação de Objeto)
+		//Agora temos um objeto real na memoria pois ele está iniciado pelo new.
+		//Aluno aluno1 = new Aluno();//Aqui será o João
+		
+		String nome = JOptionPane.showInputDialog("Informe o nome do aluno?");
+		String idade = JOptionPane.showInputDialog("Informe o idade do aluno?");
+		String nascimento = JOptionPane.showInputDialog("Informe a data de nascimento do aluno?");
+		String registro = JOptionPane.showInputDialog("Informe o registro geral do aluno?");
+		String cpf = JOptionPane.showInputDialog("Informe o cpf do aluno?");
+		String mae = JOptionPane.showInputDialog("Informe o nome da mãe do aluno?");
+		String pai = JOptionPane.showInputDialog("Informe o nome do pai do aluno?");
+		String matri = JOptionPane.showInputDialog("Informe a data da matricula do aluno?");
+		String escola = JOptionPane.showInputDialog("Informe o nome da escola do aluno?");
+		String serie = JOptionPane.showInputDialog("Informe a serie do aluno?");
+		String mat1 = JOptionPane.showInputDialog("Informe a materia");
+		String n1 = JOptionPane.showInputDialog("Informe 1 nota do aluno?");
+		String mat2 = JOptionPane.showInputDialog("Informe a materia");
+		String n2 = JOptionPane.showInputDialog("Informe 2 nota do aluno?");
+		String mat3 = JOptionPane.showInputDialog("Informe a materia");
+		String n3 = JOptionPane.showInputDialog("Informe 3 nota do aluno?");
+		String mat4 = JOptionPane.showInputDialog("Informe a materia");
+		String n4 = JOptionPane.showInputDialog("Informe 4 nota do aluno?");
+		
+		Aluno aluno1 = new Aluno();//Aqui será o João
+		aluno1.setNome(nome);
+		aluno1.setIdade(Integer.valueOf(idade));
+		aluno1.setDataNascimento(nascimento);
+		aluno1.setRegistroGeral(registro);
+		aluno1.setNumeroCpf(cpf);
+		aluno1.setNomeMae(mae);
+		aluno1.setNomePai(pai);
+		aluno1.setDataMatricula(matri);
+		aluno1.setNomeEscola(escola);
+		aluno1.setSerie(serie);
+		
+		Disciplina disciplina1 = new Disciplina();
+		disciplina1.setDisciplina("Portugues");
+		disciplina1.setNota(6.5);
+		aluno1.getDisciplinas().add(disciplina1);
+		
+		Disciplina disciplina2 = new Disciplina();
+		disciplina2.setDisciplina("Matematica");
+		disciplina2.setNota(6.0);
+		aluno1.getDisciplinas().add(disciplina2);
+		
+		Disciplina disciplina3 = new Disciplina();
+		disciplina3.setDisciplina("Historia");
+		disciplina3.setNota(7.0);
+		aluno1.getDisciplinas().add(disciplina3);
+		
+		Disciplina disciplina4 = new Disciplina();
+		disciplina4.setDisciplina("Geografia");
+		disciplina4.setNota(6.5);
+		aluno1.getDisciplinas().add(disciplina4);
+		
+		System.out.println(aluno1);//Descição do objeto na memoria
+		System.out.println();
+		System.out.println("Status: " + aluno1.getStatus());
+		
+		//Equals e hashcode (Diferenciar objetos).
+		
+	}
+}

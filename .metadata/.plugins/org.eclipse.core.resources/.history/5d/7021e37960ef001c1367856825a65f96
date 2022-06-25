@@ -1,0 +1,153 @@
+package OrientacaoObj;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Aluno {
+	
+	//Esses são os atributos do Aluno
+	private String nome;
+	private int idade;
+	private String dataNascimento;
+	private String registroGeral;
+	private String numeroCpf;
+	private String nomeMae;
+	private String nomePai;
+	private String dataMatricula;
+	private String nomeEscola;
+	private String serie;
+	
+	private List<disciplina> disciplina = new ArrayList<Disciplina>();
+	
+	public Disciplina getDisciplina() {
+		return disciplina;
+	}
+
+	public void setDisciplina(Disciplina disciplina) {
+		this.disciplina = disciplina;
+	}
+
+	public Aluno() { //cria os dados namemoria, sendo o padrão do java
+		
+	}
+	
+	public Aluno(String nomeP) {
+		nome = nomeP;
+	}
+	
+	public Aluno (String nomeP, int idadeP) {
+		nome = nomeP;
+		idade = idadeP;
+	}
+	
+	//Veremos o metodos SETTERS e GETTERS do Objeto.
+	//SET é para adicionar ou receber dados para os atributos.
+	//GET é para resgatar ou obter o valor do atributos.
+	
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public int getIdade() {
+		return idade;
+	}
+
+	public void setIdade(int idade) {
+		this.idade = idade;
+	}
+
+	public String getDataNascimento() {
+		return dataNascimento;
+	}
+
+	public void setDataNascimento(String dataNascimento) {
+		this.dataNascimento = dataNascimento;
+	}
+
+	public String getRegistroGeral() {
+		return registroGeral;
+	}
+
+	public void setRegistroGeral(String registroGeral) {
+		this.registroGeral = registroGeral;
+	}
+
+	public String getNumeroCpf() {
+		return numeroCpf;
+	}
+
+	public void setNumeroCpf(String numeroCpf) {
+		this.numeroCpf = numeroCpf;
+	}
+
+	public String getNomeMae() {
+		return nomeMae;
+	}
+
+	public void setNomeMae(String nomeMae) {
+		this.nomeMae = nomeMae;
+	}
+
+	public String getNomePai() {
+		return nomePai;
+	}
+
+	public void setNomePai(String nomePai) {
+		this.nomePai = nomePai;
+	}
+
+	public String getDataMatricula() {
+		return dataMatricula;
+	}
+
+	public void setDataMatricula(String dataMatricula) {
+		this.dataMatricula = dataMatricula;
+	}
+
+	public String getNomeEscola() {
+		return nomeEscola;
+	}
+
+	public void setNomeEscola(String nomeEscola) {
+		this.nomeEscola = nomeEscola;
+	}
+
+	public String getSerie() {
+		return serie;
+	}
+
+	public void setSerie(String serie) {
+		this.serie = serie;
+	}
+
+	//Método que retorna a média do aluno.
+		public double getMediaNota() {
+			return (disciplina.getNota1() + disciplina.getNota2() + disciplina.getNota3() + disciplina.getNota4()) / 4;
+		}
+		
+		public String getStatus() {
+			double media = this.getMediaNota();
+			
+			if(media > 7) {
+				return "Aluno está aprovado!";
+			}else if(media >= 5 && media >=6 ){
+				return "Auno está em recuperação";
+			}else {
+				return "Aluno está reprovado!";
+			}
+		}
+
+		@Override
+		public String toString() {
+			return "Aluno [nome=" + nome + ", idade=" + idade + ", dataNascimento=" + dataNascimento
+					+ ", registroGeral=" + registroGeral + ", numeroCpf=" + numeroCpf + ", nomeMae=" + nomeMae
+					+ ", nomePai=" + nomePai + ", dataMatricula=" + dataMatricula + ", nomeEscola=" + nomeEscola
+					+ ", serie=" + serie + ", disciplina=" + disciplina + "]";
+		}
+		
+	
+}
